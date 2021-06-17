@@ -12,3 +12,5 @@ This file is mandatory in all ALX School projects
 --> The C file name is in the $CFILE
 --> The output file is named the same as the C file but with the extension .s
 3-name : Compiles a Cfile and creates an executable named cisfun.
+4-puts.c : Prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
+5-printf.c :  prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line.
