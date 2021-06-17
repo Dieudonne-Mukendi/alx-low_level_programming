@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-
-int main ()
+/**
+ * main - The entry point of my program
+ *
+ * Return: Return O if there is no error in main program
+ */
+int main(void)
 {
-   	puts("Programming is like building a multilingual puzzle");
-	return 0;
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
