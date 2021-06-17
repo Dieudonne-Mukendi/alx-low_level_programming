@@ -11,3 +11,4 @@ This file is mandatory in all ALX School projects
 2-Assembler : Generates the assembly code of a C code and save it in an output file.
 --> The C file name is in the $CFILE
 --> The output file is named the same as the C file but with the extension .s
+3-name : Compiles a Cfile and creates an executable named cisfun.
