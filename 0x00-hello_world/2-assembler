@@ -1,2 +1,2 @@
 #!/bin/bash
-OFILE=$(echo "$CFILE"|tr .c .s); gcc -c $CFILE -o $OFILE
+gcc -S $CFILE
