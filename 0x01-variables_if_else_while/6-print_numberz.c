@@ -15,10 +15,7 @@ int main(void)
 
 	for (n = '0'; n <= '9'; n++)
 	{
-		if (n == 0)
-			putchar('0');
-		else
-			putchar(n%10 + '0');
+		putchar((char) n);
 	}
 	putchar('\n');
 
