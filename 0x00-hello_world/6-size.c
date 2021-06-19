@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * main - The entry point of my program
  *
@@ -7,15 +7,10 @@
  */
 int main(void)
 {
-	char aa = 'a';
-	int bb = 0;
-	long int cc = 0;
-	long long int dd = 0;
-	float ee = 0.0;
-	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(aa));
-	Printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(bb));
-	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(cc));
-	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(dd));
-	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(ee));
+	printf("Size of a char: %zu byte(s)\n", sizeof(char));
+	printf("Size of an int: %zu byte(s)\n", sizeof(int));
+	printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
+	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
+	printf("Size of a float: %zu byte(s)\n", sizeof(float));
 	return (0);
 }
