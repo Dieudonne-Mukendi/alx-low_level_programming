@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
-fn main()
+int main(void)
 {
 	eprintln!("and that piece of art if useful\" - Dora Korpar, 2015-10-19\n");
 
