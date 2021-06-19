@@ -11,7 +11,7 @@
  */
 int main(void)
 {
-	int n;
+	int n = 0;
 	char alphabet[28] = "abcdefghijklmnopqrstuvwxyz";
 
 	while (alphabet[n] != '\0')
