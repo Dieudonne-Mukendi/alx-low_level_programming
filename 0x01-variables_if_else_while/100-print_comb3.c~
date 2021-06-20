@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+ * main - The entry point of my program
+ *
+ * Description: The program prints all single digit numbers
+ * of base 10 separated by , . followed by a space.
+ *
+ * Return: Return O if there is no error in main program
+ */
+int main(void)
+{
+	int n = 0;
+	int m = 0;
+	int digit_saver1[60];
+	int digit_saver2[60];
+	int first_digit = 0;
+	int second_digit = 0;
+
+	for (n = 0; n <= 60; n++)
+	{
+		digit_saver1[n] = 0;
+		digit_saver2[n] = 0;
+	}
+	n = 0;
+	m = 0;
+	while (first_digit != 9 && second_digit != 9)
+	{
+		second_digit = 0;
+		while (second_digit <= 9)
+		{
+		for (m = 0; m <= 60; m++)
+		{
+			if ((first_digit == digit_saver1[m] || first_digit == digit_saver2[m]) && (second_digit == digit_saver1[m] || second_digit == digit_saver2[m]))
+				n++;
+			else
+			{
+				if (first_digit != second_digit)
+				{
+					putchar((char) first_digit);
+					putchar((char) second_digit);
+					digit_saver1[m] = (int) first_digit;
+					digit_saver2[m] = (int) second_digit;
+					if (first_digit != 8 && second_digit != 9)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+		second_digit++;
+		}
+		first_digit++;
+	}
+	putchar('\n');
+
+	return (0);
+}
