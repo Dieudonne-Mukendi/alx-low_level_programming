@@ -11,7 +11,6 @@ int main(void)
 	int y = 0;
 	int z = 0;
 	int o = 0;
-
 	for (x = 0; x <= 9; x++)
 	{
 		for (y = 0; y <= 9; y++)
