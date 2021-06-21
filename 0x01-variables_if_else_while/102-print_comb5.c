@@ -8,25 +8,25 @@
  */
 int main(void)
 {
-	int digit_one = 0;
-	int digit_two = 0;
-	int digit_three = 0;
-	int digit_four = 0;
+	int d_one = 0;
+	int d_two = 0;
+	int d_three = 0;
+	int d_four = 0;
 
-	for (digit_one = 48; digit_one <= 57; digit_one++)
+	for (d_one = 48; d_one <= 57; d_one++)
 	{
-		for (digit_two = 48; digit_two <= 57; digit_two++)
+		for (d_two = 48; d_two <= 57; d_two++)
 		{
-			for (digit_three = digit_one; digit_three <= 57; digit_three++)
+			for (d_three = d_one; d_three <= 57; d_three++)
 			{
-				for (digit_four = digit_two + 1; digit_four <= 57; digit_four++)
+				for (d_four = d_two + 1; d_four <= 57; d_four++)
 				{
-					putchar(digit_one);
-					putchar(digit_two);
+					putchar(d_one);
+					putchar(d_two);
 					putchar(' ');
-					putchar(digit_three);
-					putchar(digit_four);
-					if (!((digit_one == 57 && digit_two == 56) && (digit_three == 57 && digit_four == 57)))
+					putchar(d_three);
+					putchar(d_four);
+					if (!((d_one == 57 && d_two == 56) && (di_three == 57 && d_four == 57)))
 					{
 						putchar(',');
 						putchar(' ');
