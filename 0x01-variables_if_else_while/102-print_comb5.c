@@ -26,7 +26,7 @@ int main(void)
 					putchar(' ');
 					putchar(d_three);
 					putchar(d_four);
-					if (!((d_one == 57 && d_two == 56) && (di_three == 57 && d_four == 57)))
+					if (!((d_one == 57 && d_two == 56) && (d_three == 57 && d_four == 57)))
 					{
 						putchar(',');
 						putchar(' ');
