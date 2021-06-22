@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <limits.h>
 #include "holberton.h"
 /**
  * print_last_digit - A function that prints the last digit of a number *
