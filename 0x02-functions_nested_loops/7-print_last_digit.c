@@ -8,8 +8,13 @@
  */
 int print_last_digit(int n)
 {
-	int x = 0, y = 0,  a = (n % 10) + 48;
+	int x = 0, y = 0,  a = 0;
 
+	if (n < 0 && n != INT_MIN)
+	{
+		n = abs(n);
+	}
+	a = (n % 10) + 48;
 	if (n >= 10)
 	{
 		_putchar(a);
@@ -27,23 +32,6 @@ int print_last_digit(int n)
 		x = n + 48;
 		_putchar(x);
 		return (n);
-	}
-	else if (n < 0)
-	{
-		x = abs(n);
-		if (x >= 10)
-		{
-			a = x % 10;
-			y = a + 48;
-			_putchar(y);
-			return (a);
-		}
-		else
-		{
-			a = x + 48;
-			_putchar(a);
-			return (x);
-		}
 	}
 	else
 	{
