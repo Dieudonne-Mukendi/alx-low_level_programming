@@ -1,4 +1,4 @@
-#inlude "holberton.h"
+#include "holberton.h"
 /**
  * main - The entry point of my program
  *
