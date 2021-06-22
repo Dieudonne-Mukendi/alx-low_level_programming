@@ -21,7 +21,7 @@ int main(void)
  *
  * Return: Does not return anything
  */
-void print_alphabet(void)
+void print_alphabet()
 {
 	int i;
 	for (i = 97; i < 123; i++)
