@@ -9,9 +9,41 @@
  */
 int print_last_digit(int n)
 {
+	int x = 0;
+	int y = 0;
 	int a = (n % 10) + 48;
 
-	_putchar(a);
-
-	return (n % 10);
+	if (n >= 10)
+	{
+		_putchar(a);
+		return (n % 10);
+	}
+	else if (n > 0 && n < 10)
+	{
+		x = n + 48;
+		_putchar(x);
+		return (n);
+	}
+	else if (n < 0)
+	{
+		x = abs(n);
+		if (x >= 10)
+		{
+			a = x % 10;
+			y = a + 48;
+			_putchar(y);
+			return (a);
+		}
+		else
+		{
+			a = x + 48;
+			_putchar(a);
+			return (x);
+		}
+	}
+	else
+	{
+		_putchar(48);
+		return (0);
+        }
 }
