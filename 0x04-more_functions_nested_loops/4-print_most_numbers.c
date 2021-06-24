@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_numbers - A function who print the numbers, from 0 to 9
+ * print_most_numbers - A function who print the numbers, from 0 to 9
  * except 2 and 4.
  * Description - Does not receive any parameters
  *
@@ -13,7 +13,7 @@ void print_most_numbers(void)
 	for (i = 48; i < 58; i++)
 	{
 		if (!(i == 50 || i == 52))
-		_putchar(i);
+			_putchar(i);
 	}
 	_putchar('\n');
 }
