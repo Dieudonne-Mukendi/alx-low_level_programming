@@ -6,7 +6,7 @@
  *
  * Return: Does not return anything
  */
-void print_numbers(int n)
+void print_line(int n)
 {
 	int i;
 
