@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * more_numbers - A function who print the numbers, from 0 to 14
+ * more_numbers - A function who print 10 times the numbers, from 0 to 14
  *
  * Description - Does not receive any parameters
  *
@@ -8,11 +8,14 @@
  */
 void more_numbers(void)
 {
-	int i;
+	int i, j;
 
-	for (i = 48; i < 63; i++)
+	for (j = 0; j < 10; j++)
 	{
-		_putchar(i);
+		for (i = 48; i < 63; i++)
+		{
+			_putchar(i);
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
