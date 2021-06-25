@@ -13,14 +13,16 @@ int main(void)
 		b = a % 3;
 		c = a % 5;
 		if (b == 0 && c == 0)
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		else if (c == 0 && b != 0)
-			printf("Buzz ");
+			printf("Buzz");
 		else if (b == 0 && c != 0)
-			printf("Fizz ");
+			printf("Fizz");
 		else
-			printf("%d ", a);
+			printf("%d", a);
+		if (a < 100)
+			putchar(' ');
 	}
-
+	putchar('\n');
 	return (0);
 }
