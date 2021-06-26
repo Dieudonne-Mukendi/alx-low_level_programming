@@ -2,9 +2,9 @@
 /**
  * main - the entry point of the program
  *
- * return: 0 if the program run with success
+ * Return: 0 if the program run with success
  */
-int main (void)
+int main(void)
 {
 	int a, i, b, c;
 
@@ -16,6 +16,6 @@ int main (void)
 		if (b == 0 || c == 0)
 			a = a + i;
 	}
-	printf("%d", a);
+	printf("%d\n", a);
 	return (0);
 }
