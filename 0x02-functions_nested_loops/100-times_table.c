@@ -26,6 +26,11 @@ void print_times_table(int n)
 				if ((j != 0 && a >= 10) && a < 100)
 					_putchar(' ');
 				printf("%d", a);
+				if (j != n)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 			_putchar('\n');
 		}
