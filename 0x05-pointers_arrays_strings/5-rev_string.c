@@ -12,10 +12,10 @@ void rev_string(char *s)
 	{
 		length++;
 	}
-	char sr[length];
+	char sr[500];
 	int i = length - 1;
 	int j = 0;
-	int *p = s;
+	char *p = s;
 
 	while (j < length)
 	{
