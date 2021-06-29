@@ -12,7 +12,8 @@ int _atoi(char *s)
 		length++;
 	for (count = 0; count < length; count++)
 	{
-		if (s[count] == '-' || s[count] == '+')
+		if ((s[count] == '-' || s[count] == '+') ||
+			s[count] == ' ')
 		{
 			if (s[count] == '-')
 				signe += 1;
@@ -33,6 +34,6 @@ int _atoi(char *s)
 			return (0);
 	}
 	if (signe % 2)
-		num = - num;
+		num = -num;
 	return (num);
 }
