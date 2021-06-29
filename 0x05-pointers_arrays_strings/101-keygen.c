@@ -17,7 +17,7 @@ int main(void)
 	while (sum > G_MAX)
 	{
 		c = rand() % (G_MAX - G_MIN) + G_MIN;
-		sum -+ c;
+		sum -= c;
 		if (sum < G_MIN)
 		{
 			c -= (G_MIN -sum);
