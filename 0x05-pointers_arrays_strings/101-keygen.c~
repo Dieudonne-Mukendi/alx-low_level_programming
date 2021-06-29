@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define G_MIN 33
+#define G_MAX 126
+/**
+ * main - generate valid passwords for 101-crackme
+ * Return: 0 is run with success
+ */
+int main(void)
+{
+	int sum = 2772;
+	char c;
+
+	srand(time(NULL));
+	return (0);
+}
