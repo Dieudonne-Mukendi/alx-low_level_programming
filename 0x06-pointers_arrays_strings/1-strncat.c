@@ -1,4 +1,4 @@
-x#include "holberton.h"
+#include "holberton.h"
 /**
  * _strncat - concatenates two strings
  * use at most @n bytes from @src
