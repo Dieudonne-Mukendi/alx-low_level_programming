@@ -13,9 +13,9 @@ char *cap_string(char *str)
 	while (str[i] != '\0')
 	{
 		tmp = 0;
-		for (; sep[j] != '\0' && i != 0; j++)
+		for (j = 0; sep[j] != '\0' && i != 0; j++)
 		{
-			if (str[i - 1] == sptr[j])
+			if (str[i - 1] == sep[j])
 			{
 				tmp = 1;
 				break;
