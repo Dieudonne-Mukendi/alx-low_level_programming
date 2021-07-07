@@ -12,7 +12,7 @@ int prime_checker(int x, int y)
 	else if (y != 1 && x % y == 0)
 		return (0);
 	else
-		prime_checker(x, y - 1);
+		return (prime_checker(x, y - 1));
 }
 
 /**
@@ -24,6 +24,5 @@ int is_prime_number(int n)
 {
 	if (n > 1)
 		return (prime_checker(n, n / 2));
-	else
-		return (0);
+	return (0);
 }
