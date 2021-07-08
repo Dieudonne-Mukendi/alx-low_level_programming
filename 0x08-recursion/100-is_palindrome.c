@@ -10,10 +10,13 @@ int s_cmp(char *s, int inc, int dec)
 {
 	if (!s[inc])
 		return (1);
-	if (s[inc] == s[dec])
-		s_cmp(s, inc + 1, dec - 1);
 	else
+	{
+		if (s[inc] == s[dec])
+			s_cmp(s, inc + 1, dec - 1);
+		else
 		return (0);
+	}
 }
 /**
  * is_palindrome - returns 1 if a string is a palindrome and 0 if not
