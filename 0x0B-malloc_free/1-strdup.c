@@ -9,9 +9,14 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int i, j = strlen(str);
-	char *arr = (char *)malloc((j + 1) * sizeof(char));
+	unsigned int i, j;
+	char *arr;
 
+	if (str != NULL)
+	{
+		j = strlen(str);
+		arr = (char *)malloc((j + 1) * sizeof(char));
+	}
 	if (str == NULL || arr == NULL)
 	{
 		arr = NULL;
