@@ -1,1 +1,4 @@
-void _puts(char *s);
+#include "holberton.h"
+void _puts(char *s)
+{
+}

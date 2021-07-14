@@ -1,1 +1,4 @@
-int _isupper(int c);
+#include "holberton.h"
+int _isupper(int c)
+{
+}

@@ -1,1 +1,4 @@
-unsigned int _strspn(char *s, char *accept);
+#include "holberton.h"
+unsigned int _strspn(char *s, char *accept)
+{
+}

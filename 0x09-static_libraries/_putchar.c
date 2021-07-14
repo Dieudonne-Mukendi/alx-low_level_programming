@@ -1,1 +1,4 @@
-int _putchar(char c);
+#include "holberton.h"
+int _putchar(char c)
+{
+}
