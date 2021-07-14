@@ -12,17 +12,11 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, len1, len2;
 	char *arr = NULL;
 
-	if (s1 != NULL || s2 != NULL)
-	{
-		len1 = (s1) ? strlen(s1) : 0;
-		len2 = (s2) ? strlen(s2) : 0;
-		arr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
-	}
-	if ((s1 == NULL && s2 == NULL) || arr == NULL)
-	{
-		arr = NULL;
+	len1 = (s1) ? strlen(s1) : 0;
+	len2 = (s2) ? strlen(s2) : 0;
+	arr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	if (arr == NULL)
 		return (arr);
-	}
 	for (i = 0; i < len1; i++)
 		arr[i] = s1[i];
 	for (; i < len2 + len1; i++)
