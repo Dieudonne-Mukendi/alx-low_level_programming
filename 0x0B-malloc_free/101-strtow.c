@@ -11,7 +11,7 @@ char **strtow(char *str)
 	char **arr_words = NULL;
 	int i, j, maxlen, wlen = 0, slen, words = 0, sig = 0, pre_sig = 0;
 
-	if (str == NULL || str == '')
+	if (str == NULL)
 		return (NULL);
 	slen = strlen(str);
 	for (i = 0; i < slen; i++)
