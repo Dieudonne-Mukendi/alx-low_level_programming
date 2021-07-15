@@ -1,3 +1,4 @@
+#include <string.h>
 #include "holberton.h"
 #include <stdlib.h>
 /**
