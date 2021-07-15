@@ -1,0 +1,31 @@
+#include "holberton.h"
+#include <stdlib.h>
+/**
+ * string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ *  @n: number of character from second string
+ * Return: a pointer to the new string
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	char *str;
+	int i, len1, len2, slen = 0;
+
+	len1 = (s1) ? strlen(s1) : 0;
+	len2 = (s2) ? strlen(s2) : 0;
+	if (n < len2)
+		len2 = n;
+	str = malloc((len1 + len2 + 1) * sizeof(char));
+	if (str == NULL)
+	{
+		free(str);
+		return (NULL);
+	}
+	for (i = 0; i < len1; i++)
+		str[slen++] = s1[i];
+	for (i = 0; i < len2; i ++)
+		str[slen++] = s2[i];
+	str[slen] = '\0';
+	return (str);
+}
