@@ -2,21 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * cnt_char - count character of a words
- * @str: words
- * Return: the number of character
- */
-int cnt_char(char *str)
-{
-	int i;
-
-	for (i = 0; str[i] != 32 && str[i] != 9; i++)
-		;
-	return (i);
-}
-/**
  * strtow - splits a string to words
- * @str: string to split *
+ * @str: string to split
  * Return: a point to an array of strings or NULL
  */
 char **strtow(char *str)
@@ -47,8 +34,10 @@ char **strtow(char *str)
 		sig = (str[i] == 32 || str[i] == 9) ? 0 : 1;
 		if (sig)
 		{
-			wlen = cnt_char(str + i);
-			arr_words[words] = (char *)malloc((wlen + 1) * sizeof(char));
+			for (j = 0; str[i + j] != 32 && str[i + j] != 9; j++)
+				;
+			wlen = j;
+			arr_words[words] = (char *)malloc(wlen * sizeof(char));
 			if (arr_words[words] == NULL)
 			{
 				for (; words >= 0; words--)
