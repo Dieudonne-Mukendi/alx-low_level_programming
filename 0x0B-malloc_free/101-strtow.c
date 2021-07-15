@@ -11,12 +11,12 @@ char **strtow(char *str)
 	char **arr_words = NULL;
 	int i, j, maxlen, wlen = 0, slen, words = 0, sig = 0, pre_sig = 0;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str == '')
 		return (NULL);
 	slen = strlen(str);
 	for (i = 0; i < slen; i++)
 	{
-		sig = (str[i] == 32 || str[i] == "\t") ? 0 : 1;
+		sig = (str[i] == 32 || str[i] == '\t') ? 0 : 1;
 		words = (pre_sig == 0 && sig == 1) ? words + 1 : words;
 		if (wlen > 0 && sig == 0)
 			maxlen = (wlen > maxlen) ? wlen : maxlen;
