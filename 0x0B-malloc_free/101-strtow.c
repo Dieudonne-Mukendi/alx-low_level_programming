@@ -22,7 +22,7 @@ char **strtow(char *str)
 	}
 	if (words == 0)
 		return (NULL);
-	arr_words = (char **)malloc(words * sizeof(char *));
+	arr_words = malloc(words * sizeof(char *));
 	if (arr_words == NULL)
 	{
 		free(arr_words);
@@ -37,7 +37,7 @@ char **strtow(char *str)
 			for (j = 0; str[i + j] != 32 && str[i + j] != 9; j++)
 				;
 			wlen = j;
-			arr_words[words] = (char *)malloc(wlen * sizeof(char));
+			arr_words[words] = malloc(wlen * sizeof(char));
 			if (arr_words[words] == NULL)
 			{
 				for (; words >= 0; words--)
@@ -50,7 +50,7 @@ char **strtow(char *str)
 				arr_words[words][j] = str[i + j];
 			}
 			words++;
-			i += wlen;
+			i += wlen - 1;
 		}
 	}
 	return (arr_words);
