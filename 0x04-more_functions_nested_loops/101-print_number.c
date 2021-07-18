@@ -1,21 +1,23 @@
 #include "holberton.h"
 /**
  * print_number - prints an integer
- * @n: integer to print
+ * @na: integer to print
  * Return: nothing
  */
-void print_number(int n)
+void print_number(int na)
 {
-	unsigned int pc, i, z, nmodul;
+	unsigned int pc, i, z, nmodul, n;
 
-	if (n == 0)
+	if (na == 0)
 		_putchar('0');
 	/* if n is negative we make it positive*/
-	if (n < 0)
+	if (na < 0)
 	{
-		n = -n;
+		n = -na;
 		_putchar('-');
 	}
+	else
+		n = na;
 	if (n < 10 && n > 0)
 		_putchar(n + '0');
 	while (n > 10)
@@ -36,7 +38,7 @@ void print_number(int n)
 		while (z-- > 0)
 			_putchar('0');
 		n %= nmodul;
-		if (n < 10)
+		if (n > 0 && n < 10)
 			_putchar(n + '0');
 	}
 }
