@@ -20,7 +20,7 @@ void print_number(int na)
 		n = na;
 	if (n < 10 && n > 0)
 		_putchar(n + '0');
-	while (n > 10)
+	while (n >= 10)
 	{
 		pc = n;
 		z = 0;
