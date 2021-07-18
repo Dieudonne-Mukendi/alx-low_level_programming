@@ -6,10 +6,10 @@
  *
  * Return: 0 if success
  */
-int main()
+int main(void)
 {
-	unsigned long long num = 612852475143;
-	unsigned long long factor = 2;
+	unsigned long num = 612852475143;
+	unsigned long factor = 2;
 
 	while (num)
 	{
@@ -20,6 +20,6 @@ int main()
 		else
 			break;
 	}
-	printf("%lld\n", factor);
+	printf("%ld\n", factor);
 	return (0);
 }
