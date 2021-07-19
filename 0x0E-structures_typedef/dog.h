@@ -2,10 +2,12 @@
 #define DOG_H
 
 /**
- * dog - a data type with poppy structure
+ * struct dog - a data type with poppy structure
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
+ *
+ * Description: represente a dog, his name, age and his owner
  */
 struct dog
 {
