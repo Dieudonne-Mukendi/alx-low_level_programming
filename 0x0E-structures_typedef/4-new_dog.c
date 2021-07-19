@@ -19,7 +19,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	/*since d is not NULL I initialize */
 	d->name = (name) ? name : NULL;
-	d->age = (age) ? age : 0.0;
+	if (age)
+		d->age = age;
 	d->owner = (owner) ? owner : NULL;
 	return (d);
 }
