@@ -10,6 +10,10 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	/* I verifie if @d is not null */
+	if (!d)
+		return;
+	/*since d is not NULL i initialize */
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
