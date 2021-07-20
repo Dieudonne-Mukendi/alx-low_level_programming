@@ -9,11 +9,15 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int loc, flac = 0;
+	int loc, flag = 0;
 
-	if (!(array && cmp && size > 0))
+	if (!(array || cmp) || size <= 0)
 		return (-1);
-	for (loc = 0; array[loc] < size || flac != 0; loc++)
-		flac = (cmp(array[loc])) ? loc : 0;
-	return (loc);
+	for (loc = 0; loc < size; loc++)
+	{
+		flag = cmp(array[loc]);
+		if (flag)
+			return (loc);
+	}
+	return (-1);
 }
