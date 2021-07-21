@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int a, int b)
 
 	while (i < 5 && s != NULL)
 	{
-		if (ops[i].op[0] == s[0])
+		if (ops[i].op == s && s[1] == '\0')
 			return (ops[i].f);
 		i++;
 	}
