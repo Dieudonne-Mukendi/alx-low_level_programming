@@ -10,7 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-	int byte;
+	int byte, i;
+	int (*code_addr)(int, char **) = main;
+	unsigned char code;
 
 	if (argc < 2)
 	{
@@ -25,6 +27,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-
+	for (i = 0; i < byte; i++)
+	{
+		code = *(unsigned char *)code_addr;
+		printf("%.2x", code);
+		code_addr++;
+		if (i != byte - 1)
+			putchar(' ');
+	}
+	putchar('\n');
 	return (0);
 }
