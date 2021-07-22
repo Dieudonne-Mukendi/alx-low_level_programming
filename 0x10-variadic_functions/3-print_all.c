@@ -35,7 +35,7 @@ void p_strings(va_list arg)
 {
 	char *s = (char *)va_arg(arg, char *);
 
-	printf("%s", s);
+	printf("%s", (s) ? s : "(nil)");
 }
 /**
  *  print_all - prints anything
