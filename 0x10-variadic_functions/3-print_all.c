@@ -65,15 +65,14 @@ void print_all(const char * const format, ...)
 			if (fp_get[i].c == format[j])
 			{
 				fun = fp_get[i].pf;
+				if (i != 0)
+					printf(", ");
+				fun(p_arg);
 				break;
 			}
 			i++;
 			fun = NULL;
 		}
-		if (i != 0 && fun)
-			printf(", ");
-		if (fun)
-			fun(p_arg);
 		j++;
 	}
 	printf("\n");
