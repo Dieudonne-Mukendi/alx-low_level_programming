@@ -1,3 +1,4 @@
+#include <string.h>
 #include "variadic_functions.h"
 /**
  * p_char - print a character
@@ -69,7 +70,6 @@ void (*get_printer(char f))(va_list)
 void print_all(const char * const format, ...)
 {
 	int i = 0, len;
-	char *print;
 	void (*fun)(va_list);
 	va_list p_arg;
 
