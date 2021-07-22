@@ -65,7 +65,7 @@ void print_all(const char * const format, ...)
 			if (fp_get[i].c == format[j])
 			{
 				fun = fp_get[i].pf;
-				if (i != 0)
+				if (j != 0)
 					printf(", ");
 				fun(p_arg);
 				break;
