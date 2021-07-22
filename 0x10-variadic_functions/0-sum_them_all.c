@@ -10,11 +10,11 @@ int sum_them_all(const unsigned int n, ...)
 	va_list args_ptr;
 	int nplus, sum = 0;
 	unsigned int args = 0;
-	va_start(args_ptr, n);
 
+	va_start(args_ptr, n);
 	if (n == 0)
 		return (0);
-	while(args < n)
+	while (args < n)
 	{
 		nplus = va_arg(args_ptr, int);
 		sum = sum + nplus;
