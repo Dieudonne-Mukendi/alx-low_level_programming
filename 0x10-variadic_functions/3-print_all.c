@@ -45,7 +45,7 @@ void p_strings(va_list arg)
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, p = 0;
 	void (*fun)(va_list);
 	va_list p_arg;
 	f_print fp_get[] = {
@@ -65,9 +65,10 @@ void print_all(const char * const format, ...)
 			if (fp_get[i].c == format[j])
 			{
 				fun = fp_get[i].pf;
-				if (j != 0)
+				if (p != 0)
 					printf(", ");
 				fun(p_arg);
+				p = 1;
 				break;
 			}
 			i++;
