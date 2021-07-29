@@ -18,7 +18,7 @@ int _slen(char *str)
 
 /**
  * print_list - prints all elements of a list_t list.
- * @head: first element of list_t
+ * @h: first element of list_t
  *
  * Return: the number of nodes
  */
