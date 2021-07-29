@@ -22,11 +22,15 @@ int _slen(char *str)
  *
  * Return: the number of nodes
  */
-int print_list(list_t *head)
+size_t print_list(const list_t *h)
 {
-	list_t *cnode = (head) ? head : NULL;
-	int i = 0, len;
+	const list_t *cnode;
+	size_t i = 0;
+	int len;
 
+	if (h == NULL)
+		return (0);
+	cnode = h;
 	while (cnode != NULL)
 	{
 		len = (cnode->str) ? _slen(cnode->str) : 0;
