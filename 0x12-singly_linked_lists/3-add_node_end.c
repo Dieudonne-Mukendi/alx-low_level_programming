@@ -12,9 +12,11 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (head == NULL)
 		return (NULL);
-	if ((new_node = malloc(sizeof(list_t))) == NULL)
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 		return (NULL);
-	if ((new_node->str = malloc(1 * strlen(str))) == NULL)
+	new_node->str = malloc(sizeof(char) * strlen(str));
+	if ((new_node->str == NULL)
 	{
 		free(new_node->str);
 		free(new_node);
