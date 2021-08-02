@@ -7,17 +7,14 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	listint_t *elem;
+	const listint_t *elem;
 	size_t num = 0;
 
 	if (h == NULL)
 		return (num);
 	elem = malloc(sizeof(listint_t));
 	if (elem == NULL)
-	{
-		free(elem);
 		return (-1);
-	}
 	elem = h;
 	while (elem != NULL)
 	{
