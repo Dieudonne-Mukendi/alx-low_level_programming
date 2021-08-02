@@ -20,6 +20,7 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 
+void startupfun (void) __attribute__ ((constructor));
 int _slen(char *str);
 int _putchar(char c);
 size_t print_list(const list_t *h);
