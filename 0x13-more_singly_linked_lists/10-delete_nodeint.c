@@ -28,6 +28,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int idx)
 	}
 	for (; i < idx - 1 && idx_node != NULL; i++)
 		idx_node = (idx_node->next) ? idx_node->next : NULL;
+	if (idx_node == NULL || idx_node->next == NULL)
+		return (-1);
 	to_delete = idx_node->next;
 	idx_node->next = (to_delete->next) ? to_delete->next : NULL;
 	free(to_delete);
