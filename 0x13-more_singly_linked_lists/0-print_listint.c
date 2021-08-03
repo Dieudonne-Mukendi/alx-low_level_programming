@@ -7,7 +7,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *elem;
+	listint_t *elem;
 	size_t num = 0;
 
 	if (h == NULL)
@@ -15,13 +15,13 @@ size_t print_listint(const listint_t *h)
 	elem = malloc(sizeof(listint_t));
 	if (elem == NULL)
 		return (-1);
-	elem = h;
+	elem = (listint_t *) h;
 	while (elem != NULL)
 	{
 		printf("%d\n", elem->n);
 		num++;
 		elem = elem->next;
-
 	}
+	free(elem);
 	return (num);
 }
