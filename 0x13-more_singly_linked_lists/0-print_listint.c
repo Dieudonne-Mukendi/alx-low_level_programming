@@ -12,9 +12,9 @@ size_t print_listint(const listint_t *h)
 
 	if (h == NULL)
 		return (num);
-	elem = malloc(sizeof(listint_t));
+	/*elem = malloc(sizeof(listint_t));
 	if (elem == NULL)
-		return (-1);
+	return (-1);*/
 	elem = (listint_t *) h;
 	while (elem != NULL)
 	{
@@ -22,6 +22,6 @@ size_t print_listint(const listint_t *h)
 		num++;
 		elem = elem->next;
 	}
-	free(elem);
+	/*free(elem);*/
 	return (num);
 }
